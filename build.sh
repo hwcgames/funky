@@ -19,19 +19,15 @@ elif [ "$FUNKY_TARGET" == "Web" ]; then
 	export GODOT_PROFILE="HTML5"
 	export EXTENSION="html"
 	export BUILD_DIR=./build/web
+	export out_file_prefix="index"
 else
 	export GODOT_PROFILE="Linux/X11"
 	export EXTENSION="run"
 	export BUILD_DIR=./build/linux
-	export out_file_prefix="index"
 fi
 mkdir -p $BUILD_DIR
 # Run godot build
 $godot --no-window --export "$GODOT_PROFILE" $BUILD_DIR/$out_file_prefix.$EXTENSION
 # Copy license and attribution
 cp LICENSE ATTRIBUTION $BUILD_DIR
-# Copy songs
-cp -r songs $BUILD_DIR
-# Clean already-imported files from songs dir
-rm -r $BUILD_DIR/songs/**/*.{import,ogg}
 echo "DONE!"
