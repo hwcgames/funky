@@ -96,7 +96,6 @@ jobs:
           - windows
           - mac
           - linux
-          - web
     steps:
       - uses: actions/download-artifact@v2.0.8
         with:
