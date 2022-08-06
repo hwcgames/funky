@@ -65,7 +65,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/midi/plugin.cfg", "res://addons/nylon/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/midi/plugin.cfg" )
 
 [physics]
 

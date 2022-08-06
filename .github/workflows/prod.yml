@@ -25,9 +25,7 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Windows Build
         run: |
-          mkdir -v -p build/windows
-          godot -v --export "Windows Desktop" build/windows/$EXPORT_NAME.exe
-          cp -r LICENSE ATTRIBUTION build/windows
+          FUNKY_TARGET=Windows bash build.sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
@@ -50,9 +48,7 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Linux Build
         run: |
-          mkdir -v -p build/linux
-          godot -v --export "Linux/X11" build/linux/$EXPORT_NAME.x86_64
-          cp -r LICENSE ATTRIBUTION build/linux
+          FUNKY_TARGET=Linux bash build.sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
@@ -75,9 +71,7 @@ jobs:
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Mac Build
         run: |
-          mkdir -v -p build/mac
-          godot -v --export "Mac OSX" build/mac/$EXPORT_NAME.zip
-          cp -r LICENSE ATTRIBUTION build/mac
+          FUNKY_TARGET=Darwin bash build.sh
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
