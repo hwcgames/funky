@@ -78,7 +78,7 @@ jobs:
           name: mac
           path: build/mac
 
-  export-linux:
+  export-web:
     name: Web Export
     runs-on: ubuntu-latest
     container:
