@@ -95,6 +95,7 @@ jobs:
       - name: Web Build
         run: |
           FUNKY_TARGET=Web bash build.sh
+          mv build/web/FUNKY.html build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
