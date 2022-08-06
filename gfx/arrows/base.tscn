@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fx/PolygonBounce.gd" type="Script" id=1]
+[ext_resource path="res://gfx/arrows/base.gd" type="Script" id=2]
+
+[node name="Polygon2D" type="Polygon2D"]
+rotation = 4.71239
+color = Color( 0, 0, 1, 1 )
+antialiased = true
+polygon = PoolVector2Array( -3.81596e-07, -32, 23, 12, 5, -5.96244e-08, 9, 29, -10, 25, -4, 4.76995e-08, -27, 14 )
+script = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
+bounce_distance = 5.0

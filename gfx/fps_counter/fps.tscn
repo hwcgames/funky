@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+func _process(delta):
+	text = str(Engine.get_frames_per_second())
+	pass
+"
+
+[node name="Control" type="Label"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 1 )

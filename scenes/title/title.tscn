@@ -1,0 +1,236 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fx/PolygonBounce.gd" type="Script" id=1]
+[ext_resource path="res://gfx/arrows/base.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gfx/upcoming_bar/bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gfx/fps_counter/fps.tscn" type="PackedScene" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Button
+
+func _pressed():
+	MusicMan.stop()
+	MusicMan.play(\"res://songs/test\")
+"
+
+[node name="title" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Control2" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+
+[node name="UpcomingBar" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 2.0
+margin_top = 35.2
+margin_right = 0.271996
+margin_bottom = 0.199951
+cue = "enemy"
+
+[node name="UpcomingBar2" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 63.0
+margin_top = 35.2
+margin_right = 61.272
+margin_bottom = -5.80005
+cue = "enemy"
+note = 50
+
+[node name="UpcomingBar3" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 115.0
+margin_top = 40.2
+margin_right = 113.272
+margin_bottom = -6.80005
+cue = "enemy"
+note = 51
+
+[node name="UpcomingBar4" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 180.0
+margin_top = 41.2
+margin_right = 178.272
+margin_bottom = -6.80005
+cue = "enemy"
+note = 52
+
+[node name="UpcomingBar5" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 544.0
+margin_top = 36.2
+margin_right = 542.272
+margin_bottom = 1.19989
+
+[node name="UpcomingBar6" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 605.0
+margin_top = 36.2
+margin_right = 603.272
+margin_bottom = -4.80011
+note = 50
+
+[node name="UpcomingBar7" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 657.0
+margin_top = 41.2
+margin_right = 655.272
+margin_bottom = -5.80011
+note = 51
+
+[node name="UpcomingBar8" parent="." instance=ExtResource( 3 )]
+anchor_top = 0.568
+anchor_right = 0.072
+anchor_bottom = 0.983
+margin_left = 722.0
+margin_top = 42.2
+margin_right = 720.272
+margin_bottom = -5.80011
+note = 52
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Polygon2D6" type="Polygon2D" parent="Control"]
+color = Color( 0.458824, 0.458824, 0.458824, 1 )
+antialiased = true
+polygon = PoolVector2Array( -407, -236, -313, -279, -128, -299, 114, -284, 394, -281, 408, -192, 350, -151, 371, -51, 274, -43, 204, 3, 12, -1, -158, -33, -324, -14, -409, -64, -398, -179, -429, -227 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D6"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Control"]
+position = Vector2( -459, -352 )
+antialiased = true
+polygon = PoolVector2Array( 81, 107, 272, 73, 234, 141, 134, 138, 139, 189, 193, 190, 155, 235, 152, 312 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Control"]
+position = Vector2( -334, -351 )
+antialiased = true
+polygon = PoolVector2Array( 212, 296, 304, 83, 355, 94, 358, 242, 412, 95, 361, 319, 314, 308, 317, 155, 266, 307 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D2"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Control"]
+position = Vector2( -345, -353 )
+antialiased = true
+polygon = PoolVector2Array( 413, 312, 440, 122, 478, 97, 469, 147, 588, 110, 493, 206, 530, 299, 487, 316, 460, 238, 459, 310 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D3"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Control"]
+antialiased = true
+polygon = PoolVector2Array( -185, -284, -246, -76, -143, -67, -91, -200, -118, -278, -163, -105, -216, -97, -171, -224 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D4"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Control"]
+antialiased = true
+polygon = PoolVector2Array( 245, -237, 282, -127, 348, -241, 352, -191, 300, -83, 207, -30, 242, -119 )
+
+[node name="Node2D" type="Node2D" parent="Control/Polygon2D5"]
+position = Vector2( -512, -300 )
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 15.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 440.0
+margin_right = 583.0
+margin_bottom = 20.0
+size_flags_horizontal = 4
+text = "Play Test Menu Song"
+script = SubResource( 1 )
+
+[node name="Polygon2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 41, 375 )
+cue = "enemy"
+note = 49
+
+[node name="Polygon2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 103, 377 )
+rotation = 0.0
+color = Color( 0.941176, 0.196078, 0.160784, 1 )
+cue = "enemy"
+note = 50
+direction = 1
+
+[node name="Polygon2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 151, 375 )
+rotation = 3.14159
+color = Color( 0.929412, 0.780392, 0.101961, 1 )
+cue = "enemy"
+note = 51
+direction = 2
+
+[node name="Polygon2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 213, 377 )
+rotation = 1.5708
+color = Color( 0.054902, 0.929412, 0.384314, 1 )
+cue = "enemy"
+note = 52
+direction = 3
+
+[node name="Polygon2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 581, 375 )
+cue = "player"
+note = 49
+
+[node name="Polygon2D6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 643, 377 )
+rotation = 0.0
+color = Color( 0.941176, 0.196078, 0.160784, 1 )
+cue = "player"
+note = 50
+direction = 1
+
+[node name="Polygon2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 691, 375 )
+rotation = 3.14159
+color = Color( 0.929412, 0.780392, 0.101961, 1 )
+cue = "player"
+note = 51
+direction = 2
+
+[node name="Polygon2D8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 753, 377 )
+rotation = 1.5708
+color = Color( 0.054902, 0.929412, 0.384314, 1 )
+cue = "player"
+note = 52
+direction = 3
