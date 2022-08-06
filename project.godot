@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "AsyncResourceLoader",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/async_resource_loader.gd"
-}, {
 "base": "AudioStreamPlayer",
 "class": "AudioStreamPlayerADSR",
 "language": "GDScript",
@@ -24,45 +19,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/midi/Bank.gd"
 }, {
-"base": "Reference",
-"class": "BatchIter",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/batch_iter.gd"
-}, {
-"base": "Reference",
-"class": "Coroutine",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/coroutine.gd"
-}, {
-"base": "Reference",
-"class": "DelayedCallable",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/delayed_callable.gd"
-}, {
-"base": "Reference",
-"class": "DelayedResume",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/delayed_resume.gd"
-}, {
-"base": "Reference",
-"class": "FrameCallable",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/frame_callable.gd"
-}, {
-"base": "Reference",
-"class": "FrameResume",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/frame_resume.gd"
-}, {
 "base": "Node",
 "class": "MidiPlayer",
 "language": "GDScript",
 "path": "res://addons/midi/MidiPlayer.gd"
-}, {
-"base": "Node",
-"class": "Nylon",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/nylon.gd"
 }, {
 "base": "Node2D",
 "class": "PolygonBounce",
@@ -75,49 +35,17 @@ _global_script_classes=[ {
 "path": "res://addons/midi/SMF.gd"
 }, {
 "base": "Reference",
-"class": "Silk",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/silk.gd"
-}, {
-"base": "Reference",
 "class": "SoundFont",
 "language": "GDScript",
 "path": "res://addons/midi/SoundFont.gd"
-}, {
-"base": "Reference",
-"class": "TimedIter",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/timed_iter.gd"
-}, {
-"base": "Reference",
-"class": "TimedResume",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/timed_resume.gd"
-}, {
-"base": "Reference",
-"class": "WeakCallable",
-"language": "GDScript",
-"path": "res://addons/nylon/scripts/weak_callable.gd"
 } ]
 _global_script_class_icons={
-"AsyncResourceLoader": "",
 "AudioStreamPlayerADSR": "",
 "Bank": "",
-"BatchIter": "",
-"Coroutine": "",
-"DelayedCallable": "",
-"DelayedResume": "",
-"FrameCallable": "",
-"FrameResume": "",
 "MidiPlayer": "res://addons/midi/icon.png",
-"Nylon": "",
 "PolygonBounce": "",
 "SMF": "",
-"Silk": "",
-"SoundFont": "",
-"TimedIter": "",
-"TimedResume": "",
-"WeakCallable": ""
+"SoundFont": ""
 }
 
 [application]
@@ -128,7 +56,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Worker="*res://addons/nylon/scripts/worker.gd"
 MusicMan="*res://singletons/MusicMan.gd"
 
 [display]
